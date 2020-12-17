@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Computer Insider</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <link rel="icon" href="img/Logo_img/Logo.png">
+  </head>
+  <style>
+    .w3-sidebar a {font-family: "Roboto", sans-serif}
+    body,h1,h2,h3,h4,h5,h6,.w3-wide {font-family: "Montserrat", sans-serif;}
+    a.static{
+      text-decoration: none;
+    }
+  </style>
+
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+    
+    .column {
+      float: left;
+      width: 33.33%;
+      padding: 20px;
+    }
+    
+    /* Clearfix (clear floats) */
+    .row::after {
+      content: "";
+      clear: both;
+      display: table;
+    }
+    
+    /* Responsive layout - makes the three columns stack on top of each other instead of next to each other */
+    @media screen and (max-width: 500px) {
+      .column {
+        width: 100%;
+      }
+    }
+  </style>
+  <body class="w3-content" style="max-width:1200px">
+
+    <!-- Sidebar/menu -->
+    <nav class="w3-sidebar w3-bar-block w3-white w3-collapse w3-top" style="z-index:3;width:250px" id="mySidebar">
+      <div class="w3-container w3-display-container w3-padding-16">
+        <i onclick="w3_close()" class="fa fa-remove w3-hide-large w3-button w3-display-topright"></i>
+        <a class="static" href="index.html"><h3 class="w3-wide" style="color: black;"><b>𝕮𝖔𝖒𝖕𝖚𝖙𝖊𝖗 𝕴𝖓𝖘𝖎𝖉𝖊𝖗</b></h3></a>
+      </div>
+
+      <!-- Navagation Bar Buttons-->
+      <div class="w3-padding-64 w3-large w3-text-grey" style="font-weight:bold">
+        <a onclick="myAccFunc()" href="javascript:void(0)" class="w3-button w3-block w3-left-align" id="myBtn">
+            New <i class="fa fa-caret-down"></i>
+          </a>
+
+        <div id="NewList" class="w3-bar-block w3-hide w3-padding-large w3-medium">
+          <a href="NewCPU.html" class="w3-bar-item w3-button">CPU</a>
+          <a href="NewGPU.html" class="w3-bar-item w3-button">GPU</a>
+          <a href="NewRAM.html" class="w3-bar-item w3-button">RAM</a>
+          <a href="NewPSU.html" class="w3-bar-item w3-button">PSU</a>
+          <a href="NewCase.html" class="w3-bar-item w3-button">Case</a>
+          <a href="NewStorage.html" class="w3-bar-item w3-button">Storage</a>
+          <a href="NewMotherboard.html" class="w3-bar-item w3-button">Motherboard</a>
+        </div>
+
+        <a onclick="myAccFunc1()" href="javascript:void(0)" class="w3-button w3-block w3-left-align w3-white" id="myBtn1">
+            Premium <i class="fa fa-caret-down"></i>
+          </a>
+
+        <div id="PremiumList" class="w3-bar-block w3-hide w3-padding-large w3-medium">
+          <a href="PremiumCPU.html" class="w3-bar-item w3-button">CPU</a>
+          <a href="PremiumGPU.html" class="w3-bar-item w3-button">GPU</a>
+          <a href="javascript:void(0)" class="w3-bar-item w3-button w3-white">RAM</a>
+          <a href="PremiumPSU.html" class="w3-bar-item w3-button">PSU</a>
+          <a href="PremiumCase.html" class="w3-bar-item w3-button">Case</a>
+          <a href="PremiumStorage.html" class="w3-bar-item w3-button">Storage</a>
+          <a href="PremiumMotherboard.html" class="w3-bar-item w3-button">Motherboard</a>
+        </div>
+
+        <a onclick="myAccFunc2()" href="javascript:void(0)" class="w3-button w3-block w3-left-align" id="myBtn2">
+            Budget <i class="fa fa-caret-down"></i>
+          </a>
+
+        <div id="BudgetList" class="w3-bar-block w3-hide w3-padding-large w3-medium">
+          <a href="BudgetCPU.html" class="w3-bar-item w3-button">CPU</a>
+          <a href="BudgetGPU.html" class="w3-bar-item w3-button">GPU</a>
+          <a href="BudgetRAM.html" class="w3-bar-item w3-button">RAM</a>
+          <a href="BudgetPSU.html" class="w3-bar-item w3-button">PSU</a>
+          <a href="BudgetCase.html" class="w3-bar-item w3-button">Case</a>
+          <a href="BudgetStorage.html" class="w3-bar-item w3-button">Storage</a>
+          <a href="BudgetMotherboard.html" class="w3-bar-item w3-button">Motherboard</a>
+        </div>  
+
+          
+        <a href="DIY.html" class="w3-bar-item w3-button">PC DIY</a>
+        
+      </div>
+
+      <a href="about.html" class="w3-bar-item w3-button w3-padding">About</a>
+      <a href="index.html.#footer" class="w3-bar-item w3-button w3-padding">Contact</a>
+    </nav>
+
+    <!-- Top menu on small screens -->
+    <header class="w3-bar w3-top w3-hide-large w3-black w3-xlarge">
+      <a class="w3-bar-item w3-padding-24 w3-wide static" href="index.html" style="color: white;">𝕮𝖔𝖒𝖕𝖚𝖙𝖊𝖗 𝕴𝖓𝖘𝖎𝖉𝖊𝖗</a>
+      <a href="javascript:void(0)" class="w3-bar-item w3-button w3-padding-24 w3-right" onclick="w3_open()"><i class="fa fa-bars"></i></a>
+    </header>
+
+    <!-- Overlay effect when opening sidebar on small screens -->
+    <div class="w3-overlay w3-hide-large" onclick="w3_close()" style="cursor:pointer" title="close side menu" id="myOverlay"></div>
+
+    <!-- !PAGE CONTENT! -->
+    <div class="w3-main" style="margin-left:250px">
+
+      <!-- Push down content on small screens -->
+      <div class="w3-hide-large" style="margin-top:83px"></div>
+      <header class="w3-container w3-xlarge">
+        <p class="w3-left">Premium RAM</p>
+      </header>
+
+      <div class="w3-display-container w3-container">
+        <img src="img/PremiumRAM_img/Trident_Royale_Ram.jpg" alt="Trident" style="width:100%">
+        <div class="w3-display-bottomleft w3-text-black" style="padding:24px 48px">
+          <h1 class="w3-jumbo w3-hide-small">G.SKILL Trident Z Royal Series</h1>
+          <h1 class="w3-hide-large w3-hide-medium">Trident Royale</h1>
+          <h1 class="w3-hide-small">Best Premium RAM</h1>
+          <p><a href="https://gskill.com/product/165/299/1552462709/F4-3200C16D-16GTRGTrident-Z-RoyalDDR4-3200MHz-CL16-18-18-38-1.35V16GB-(2x8GB)" class="w3-button w3-black w3-padding-large w3-large">Learn More</a></p>
+        </div>
+      </div>
+
+      <div class="w3-container w3-text-grey" id="GPU">
+        <h3>Corsair</h3>
+        <p>1 Item</p>
+      </div>
+
+
+      <div class="row">
+        <div class="column">
+          <a href="https://www.corsair.com/us/en/Categories/Products/Memory/DOMINATOR-PLATINUM-RGB/p/CMT16GX4M2C3000C15">
+            <img src="img/PremiumRAM_img/Corsair_Dominator.jpg" style="width:85%">
+            <p>Corsair Dominator Platinum RGB<br><b>$864.99</b></p>
+          </a>
+        </div>
+      </div>
+
+    </div>
+    
+    <script>
+    
+      function myAccFunc() {
+        var x = document.getElementById("NewList");
+        if (x.className.indexOf("w3-show") == -1) {
+          x.className += " w3-show";
+        } else {
+          x.className = x.className.replace(" w3-show", "");
+        }
+      }
+
+      function myAccFunc1() {
+        var x = document.getElementById("PremiumList");
+        if (x.className.indexOf("w3-show") == -1) {
+          x.className += " w3-show";
+        } else {
+          x.className = x.className.replace(" w3-show", "");
+        }
+      }
+
+      function myAccFunc2() {
+        var x = document.getElementById("BudgetList");
+        if (x.className.indexOf("w3-show") == -1) {
+          x.className += " w3-show";
+        } else {
+          x.className = x.className.replace(" w3-show", "");
+        }
+      }
+
+      // keeps Nav dropdown open
+      document.getElementById("myBtn1").click();
+
+
+
+      // Open and close sidebar
+      function w3_open() {
+        document.getElementById("mySidebar").style.display = "block";
+        document.getElementById("myOverlay").style.display = "block";
+      }
+      
+      function w3_close() {
+        document.getElementById("mySidebar").style.display = "none";
+        document.getElementById("myOverlay").style.display = "none";
+      }
+    </script>
+
+  </body>
+</html>

@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Computer Insider</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <link rel="icon" href="img/Logo_img/Logo.png">
+  </head>
+  
+  <style>
+    .w3-sidebar a {font-family: "Roboto", sans-serif}
+    body,h1,h2,h3,h4,h5,h6,.w3-wide {font-family: "Montserrat", sans-serif;}
+    a.static{
+      text-decoration: none;
+    }
+  </style>
+  <body class="w3-content" style="max-width:1200px">
+
+    <!-- Sidebar/menu -->
+    <nav class="w3-sidebar w3-bar-block w3-white w3-collapse w3-top" style="z-index:3;width:250px" id="mySidebar">
+      <div class="w3-container w3-display-container w3-padding-16">
+        <i onclick="w3_close()" class="fa fa-remove w3-hide-large w3-button w3-display-topright"></i>
+            <a class="static" href="index.html"><h3 class="w3-wide" style="color: black;"><b>𝕮𝖔𝖒𝖕𝖚𝖙𝖊𝖗 𝕴𝖓𝖘𝖎𝖉𝖊𝖗</b></h3></a>
+      </div>
+    
+      <!-- Navagation Bar Buttons-->
+      <div class="w3-padding-64 w3-large w3-text-grey" style="font-weight:bold">
+        <a onclick="myAccFunc()" href="javascript:void(0)" class="w3-button w3-block w3-left-align" id="myBtn">
+            New <i class="fa fa-caret-down"></i>
+          </a>
+    
+        <div id="NewList" class="w3-bar-block w3-hide w3-padding-large w3-medium">
+          <a href="NewCPU.html" class="w3-bar-item w3-button">CPU</a>
+          <a href="NewGPU.html" class="w3-bar-item w3-button">GPU</a>
+          <a href="NewRAM.html" class="w3-bar-item w3-button">RAM</a>
+          <a href="NewPSU.html" class="w3-bar-item w3-button">PSU</a>
+          <a href="NewCase.html" class="w3-bar-item w3-button">Case</a>
+          <a href="NewStorage.html" class="w3-bar-item w3-button">Storage</a>
+          <a href="NewMotherboard.html" class="w3-bar-item w3-button">Motherboard</a>
+        </div>
+    
+        <a onclick="myAccFunc1()" href="javascript:void(0)" class="w3-button w3-block w3-left-align" id="myBtn">
+            Premium <i class="fa fa-caret-down"></i>
+          </a>
+    
+        <div id="PremiumList" class="w3-bar-block w3-hide w3-padding-large w3-medium">
+          <a href="PremiumCPU.html" class="w3-bar-item w3-button">CPU</a>
+          <a href="PremiumGPU.html" class="w3-bar-item w3-button">GPU</a>
+          <a href="PremiumRAM.html" class="w3-bar-item w3-button">RAM</a>
+          <a href="PremiumRAM.html" class="w3-bar-item w3-button">PSU</a>
+          <a href="PremiumCase.html" class="w3-bar-item w3-button">Case</a>
+          <a href="PremiumStorage.html" class="w3-bar-item w3-button">Storage</a>
+          <a href="PremiumMotherboard.html" class="w3-bar-item w3-button">Motherboard</a>
+        </div>
+
+        <a onclick="myAccFunc2()" href="javascript:void(0)" class="w3-button w3-block w3-left-align" id="myBtn2">
+          Budget <i class="fa fa-caret-down"></i>
+        </a>
+
+        <div id="BudgetList" class="w3-bar-block w3-hide w3-padding-large w3-medium">
+          <a href="BudgetCPU.html" class="w3-bar-item w3-button">CPU</a>
+          <a href="BudgetGPU.html" class="w3-bar-item w3-button">GPU</a>
+          <a href="BudgetRAM.html" class="w3-bar-item w3-button">RAM</a>
+          <a href="BudgetPSU.html" class="w3-bar-item w3-button">PSU</a>
+          <a href="BudgetCase.html" class="w3-bar-item w3-button">Case</a>
+          <a href="BudgetStorage.html" class="w3-bar-item w3-button">Storage</a>
+          <a href="BudgetMotherboard.html" class="w3-bar-item w3-button">Motherboard</a>
+        </div>  
+              
+        <a href="DIY.html" class="w3-bar-item w3-button">PC DIY</a>
+        
+      </div>
+    
+      <a href="javascript:void(0)" class="w3-bar-item w3-button w3-padding w3-white">About</a>
+      <a href="index.html.#footer" class="w3-bar-item w3-button w3-padding">Contact</a> 
+      
+    </nav>
+    
+    <!-- Top menu on small screens -->
+    <header class="w3-bar w3-top w3-hide-large w3-black w3-xlarge">
+      <a class="w3-bar-item w3-padding-24 w3-wide static" href="index.html" style="color: white;">𝕮𝖔𝖒𝖕𝖚𝖙𝖊𝖗 𝕴𝖓𝖘𝖎𝖉𝖊𝖗</a>
+      <a href="javascript:void(0)" class="w3-bar-item w3-button w3-padding-24 w3-right" onclick="w3_open()"><i class="fa fa-bars"></i></a>
+    </header>
+    
+    <!-- Overlay effect when opening sidebar on small screens -->
+    <div class="w3-overlay w3-hide-large" onclick="w3_close()" style="cursor:pointer" title="close side menu" id="myOverlay"></div>
+
+    <div class="w3-main" style="margin-left:250px">
+      <div class="w3-display-container w3-container">
+        <br><br><br><br><br><br><br>
+        <h1>Purpose</h1>
+        <h3>The purpose of Computer Insider is to inform consumers and enthusiasts about the top of the line new tech, games, and pc related information</h3>
+        <br>
+        <h2>About the Creator</h2>
+        <h4>I am a 16 year old highschool student who has passion for tech and have created this website to showcase that.</h4>
+        <br>
+        <h2>Why Computers/Tech</h2>
+        <h4>At a young age I was facinated by tech and now have the chnace to showcase my love in the form of sharing my knowledge in the computrt realted field.</h4>
+        <br>
+        <h6>Creator - Ali Quadri</h6>
+      </div>
+    </div>
+
+    <script> 
+      function myAccFunc() {
+        var x = document.getElementById("NewList");
+        if (x.className.indexOf("w3-show") == -1) {
+          x.className += " w3-show";
+        } else {
+          x.className = x.className.replace(" w3-show", "");
+        }
+      }
+      
+      function myAccFunc1() {
+        var x = document.getElementById("PremiumList");
+        if (x.className.indexOf("w3-show") == -1) {
+          x.className += " w3-show";
+        } else {
+          x.className = x.className.replace(" w3-show", "");
+        }
+      }
+
+      function myAccFunc2() {
+        var x = document.getElementById("BudgetList");
+        if (x.className.indexOf("w3-show") == -1) {
+          x.className += " w3-show";
+        } else {
+          x.className = x.className.replace(" w3-show", "");
+        }
+      }
+      
+      
+      
+      // Open and close sidebar
+      function w3_open() {
+        document.getElementById("mySidebar").style.display = "block";
+        document.getElementById("myOverlay").style.display = "block";
+      }
+      
+      function w3_close() {
+        document.getElementById("mySidebar").style.display = "none";
+        document.getElementById("myOverlay").style.display = "none";
+      }
+    </script>
+  </body>
+</html>

@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Computer Insider</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <link rel="icon" href="img/Logo_img/Logo.png">
+  </head>
+  <style>
+    .w3-sidebar a {font-family: "Roboto", sans-serif}
+    body,h1,h2,h3,h4,h5,h6,.w3-wide {font-family: "Montserrat", sans-serif;}
+    a.static{
+      text-decoration: none;
+    }
+  </style>
+
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+    
+    .column {
+      float: left;
+      width: 33.33%;
+      padding: 20px;
+    }
+    
+    /* Clearfix (clear floats) */
+    .row::after {
+      content: "";
+      clear: both;
+      display: table;
+    }
+    
+    /* Responsive layout - makes the three columns stack on top of each other instead of next to each other */
+    @media screen and (max-width: 500px) {
+      .column {
+        width: 100%;
+      }
+    }
+  </style>
+  <body class="w3-content" style="max-width:1200px">
+
+    <!-- Sidebar/menu -->
+    <nav class="w3-sidebar w3-bar-block w3-white w3-collapse w3-top" style="z-index:3;width:250px" id="mySidebar">
+      <div class="w3-container w3-display-container w3-padding-16">
+        <i onclick="w3_close()" class="fa fa-remove w3-hide-large w3-button w3-display-topright"></i>
+        <a class="static" href="index.html"><h3 class="w3-wide" style="color: black;"><b>𝕮𝖔𝖒𝖕𝖚𝖙𝖊𝖗 𝕴𝖓𝖘𝖎𝖉𝖊𝖗</b></h3></a>
+      </div>
+
+      <!-- Navagation Bar Buttons-->
+      <div class="w3-padding-64 w3-large w3-text-grey" style="font-weight:bold">
+        <a onclick="myAccFunc()" href="javascript:void(0)" class="w3-button w3-block w3-left-align" id="myBtn">
+            New <i class="fa fa-caret-down"></i>
+          </a>
+
+        <div id="NewList" class="w3-bar-block w3-hide w3-padding-large w3-medium">
+          <a href="NewCPU.html" class="w3-bar-item w3-button">CPU</a>
+          <a href="NewGPU.html" class="w3-bar-item w3-button">GPU</a>
+          <a href="NewRAM.html" class="w3-bar-item w3-button">RAM</a>
+          <a href="NewPSU.html" class="w3-bar-item w3-button">PSU</a>
+          <a href="NewCase.html" class="w3-bar-item w3-button">Case</a>
+          <a href="NewStorage.html" class="w3-bar-item w3-button">Storage</a>
+          <a href="NewMotherboard.html" class="w3-bar-item w3-button">Motherboard</a>
+        </div>
+
+        <a onclick="myAccFunc1()" href="javascript:void(0)" class="w3-button w3-block w3-left-align" id="myBtn1">
+            Premium <i class="fa fa-caret-down"></i>
+          </a>
+
+        <div id="PremiumList" class="w3-bar-block w3-hide w3-padding-large w3-medium">
+          <a href="PremiumCPU.html" class="w3-bar-item w3-button">CPU</a>
+          <a href="PremiumGPU.html" class="w3-bar-item w3-button">GPU</a>
+          <a href="PremiumRAM.html" class="w3-bar-item w3-button">RAM</a>
+          <a href="PremiumPSU.html" class="w3-bar-item w3-button">PSU</a>
+          <a href="PremiumCase.html" class="w3-bar-item w3-button">Case</a>
+          <a href="PremiumStorage.html" class="w3-bar-item w3-button">Storage</a>
+          <a href="PremiumMotherboard.html" class="w3-bar-item w3-button">Motherboard</a>
+        </div>
+
+        <a onclick="myAccFunc2()" href="javascript:void(0)" class="w3-button w3-block w3-left-align w3-white" id="myBtn2">
+            Budget <i class="fa fa-caret-down"></i>
+          </a>
+
+          <div id="BudgetList" class="w3-bar-block w3-hide w3-padding-large w3-medium">
+            <a href="javascript:void(0)" class="w3-bar-item w3-button w3-white">CPU</a>
+            <a href="BudgetGPU.html" class="w3-bar-item w3-button">GPU</a>
+            <a href="BudgetRAM.html" class="w3-bar-item w3-button">RAM</a>
+            <a href="BudgetPSU.html" class="w3-bar-item w3-button">PSU</a>
+            <a href="BudgetCase.html" class="w3-bar-item w3-button">Case</a>
+            <a href="BudgetStorage.html" class="w3-bar-item w3-button">Storage</a>
+            <a href="BudgetMotherboard.html" class="w3-bar-item w3-button">Motherboard</a>
+          </div>  
+
+          
+        <a href="DIY.html" class="w3-bar-item w3-button">PC DIY</a>
+        
+      </div>
+
+      <a href="about.html" class="w3-bar-item w3-button w3-padding">About</a>
+      <a href="index.html.#footer" class="w3-bar-item w3-button w3-padding">Contact</a>
+    </nav>
+
+    <!-- Top menu on small screens -->
+    <header class="w3-bar w3-top w3-hide-large w3-black w3-xlarge">
+      <a class="w3-bar-item w3-padding-24 w3-wide static" href="index.html" style="color: white;">𝕮𝖔𝖒𝖕𝖚𝖙𝖊𝖗 𝕴𝖓𝖘𝖎𝖉𝖊𝖗</a>
+      <a href="javascript:void(0)" class="w3-bar-item w3-button w3-padding-24 w3-right" onclick="w3_open()"><i class="fa fa-bars"></i></a>
+    </header>
+
+    <!-- Overlay effect when opening sidebar on small screens -->
+    <div class="w3-overlay w3-hide-large" onclick="w3_close()" style="cursor:pointer" title="close side menu" id="myOverlay"></div>
+
+    <!-- !PAGE CONTENT! -->
+    <div class="w3-main" style="margin-left:250px">
+
+      <!-- Push down content on small screens -->
+      <div class="w3-hide-large" style="margin-top:83px"></div>
+      <header class="w3-container w3-xlarge">
+        <p class="w3-left">Budget CPUs</p>
+      </header>
+
+      <div class="w3-display-container w3-container">
+        <img src="img/BudgetCPU_img/AMD_3_3300x_Main.jpg" alt="Ryzen" style="width:100%">
+        <div class="w3-display-bottomleft w3-text-white" style="padding:24px 48px">
+          <h1 class="w3-jumbo w3-hide-small">AMD Ryzen 3 3300x</h1>
+          <h1 class="w3-hide-large w3-hide-medium">Ryzen 3 3300x</h1>
+          <h1 class="w3-hide-small">Best Budget CPU</h1>
+          <p><a href="https://www.amd.com/en/products/cpu/amd-ryzen-3-3300x" class="w3-button w3-white w3-padding-large w3-large">Learn More</a></p>
+        </div>
+      </div>
+
+      <div class="w3-container w3-text-grey" id="CPU">
+        <h3>AMD</h3>
+        <p>3 Items</p>
+      </div>
+
+      <div class="row">
+        <div class="column">
+          <a href="https://www.amd.com/en/products/cpu/amd-ryzen-3-3100">
+            <img src="img/BudgetCPU_img/Ryzen_3100.jpg" style="width:100%">
+            <p>AMD Ryzen 3 3100<br><b>$99.99</b></p>
+          </a>
+        </div>
+        <div class="column">
+          <a href="https://www.amd.com/en/products/cpu/amd-ryzen-5-1600">
+            <img src="img/BudgetCPU_img/Ryzen_1600_af.jpg" style="width:88%">
+            <p>AMD Ryzen 5 1600 AF<br><b>$149.99</b></p>
+          </a>
+        </div>
+        <div class="column">
+          <a href="https://www.amd.com/en/products/cpu/amd-ryzen-5-3600">
+            <img src="img/BudgetCPU_img/Ryzen_5_3600.jpg" style="width:74%">
+            <p>AMD Ryzen 5 3600<br><b>$199.99</b></p>
+          </a>
+        </div>
+      </div>
+
+      <div class="w3-container w3-text-grey" id="CPU">
+        <h3>Intel</h3>
+        <p>2 Items</p>
+      </div>
+
+      <div class="row">
+        <div class="column">
+          <a href="https://ark.intel.com/content/www/us/en/ark/products/199283/intel-core-i3-10100-processor-6m-cache-up-to-4-30-ghz.html">
+            <img src="img/BudgetCPU_img/intel_10100.jpg" style="width:100%">
+            <p>Intel i3 10100<br><b>$99.99</b></p>
+          </a>
+        </div>
+        <div class="column">
+          <a href="https://ark.intel.com/content/www/us/en/ark/products/199271/intel-core-i5-10400-processor-12m-cache-up-to-4-30-ghz.html">
+            <img src="img/BudgetCPU_img/intel_10400.jpg" style="width:100%">
+            <p>Intel i5 10400<br><b>$159.99</b></p>
+          </a>
+        </div>
+      </div>
+
+    </div>
+    
+    <script>
+    
+      function myAccFunc() {
+        var x = document.getElementById("NewList");
+        if (x.className.indexOf("w3-show") == -1) {
+          x.className += " w3-show";
+        } else {
+          x.className = x.className.replace(" w3-show", "");
+        }
+      }
+
+      function myAccFunc1() {
+        var x = document.getElementById("PremiumList");
+        if (x.className.indexOf("w3-show") == -1) {
+          x.className += " w3-show";
+        } else {
+          x.className = x.className.replace(" w3-show", "");
+        }
+      }
+
+      function myAccFunc2() {
+        var x = document.getElementById("BudgetList");
+        if (x.className.indexOf("w3-show") == -1) {
+          x.className += " w3-show";
+        } else {
+          x.className = x.className.replace(" w3-show", "");
+        }
+      }
+
+      // keeps Nav dropdown open
+      document.getElementById("myBtn2").click();
+
+
+
+      // Open and close sidebar
+      function w3_open() {
+        document.getElementById("mySidebar").style.display = "block";
+        document.getElementById("myOverlay").style.display = "block";
+      }
+      
+      function w3_close() {
+        document.getElementById("mySidebar").style.display = "none";
+        document.getElementById("myOverlay").style.display = "none";
+      }
+    </script>
+
+  </body>
+</html>

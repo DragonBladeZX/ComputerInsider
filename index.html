@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Computer Insider</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <link rel="icon" href="img/Logo_img/Logo.png">
+  </head>
+  <style>
+    .w3-sidebar a {font-family: "Roboto", sans-serif}
+    body,h1,h2,h3,h4,h5,h6,.w3-wide {font-family: "Montserrat", sans-serif;}
+    a.static{
+      text-decoration: none;
+    }
+  </style>
+  <body class="w3-content" style="max-width:1200px">
+
+    <!-- Sidebar/menu -->
+    <nav class="w3-sidebar w3-bar-block w3-white w3-collapse w3-top" style="z-index:3;width:250px" id="mySidebar">
+      <div class="w3-container w3-display-container w3-padding-16">
+        <i onclick="w3_close()" class="fa fa-remove w3-hide-large w3-button w3-display-topright"></i>
+        <a class="static" href="javascript:void(0)"><h3 class="w3-wide" style="color: black;"><b>𝕮𝖔𝖒𝖕𝖚𝖙𝖊𝖗 𝕴𝖓𝖘𝖎𝖉𝖊𝖗</b></h3></a>
+      </div>
+
+      <!-- Navagation Bar Buttons-->
+      <div class="w3-padding-64 w3-large w3-text-grey" style="font-weight:bold">
+        <a onclick="myAccFunc()" href="javascript:void(0)" class="w3-button w3-block w3-left-align" id="myBtn">
+            New <i class="fa fa-caret-down"></i>
+        </a>
+
+        <div id="NewList" class="w3-bar-block w3-hide w3-padding-large w3-medium">
+          <a href="NewCPU.html" class="w3-bar-item w3-button">CPU</a>
+          <a href="NewGPU.html" class="w3-bar-item w3-button">GPU</a>
+          <a href="NewRAM.html" class="w3-bar-item w3-button">RAM</a>
+          <a href="NewPSU.html" class="w3-bar-item w3-button">PSU</a>
+          <a href="NewCase.html" class="w3-bar-item w3-button">Case</a>
+          <a href="NewStorage.html" class="w3-bar-item w3-button">Storage</a>
+          <a href="NewMotherboard.html" class="w3-bar-item w3-button">Motherboard</a>
+        </div>
+
+        <a onclick="myAccFunc1()" href="javascript:void(0)" class="w3-button w3-block w3-left-align" id="myBtn1">
+            Premium <i class="fa fa-caret-down"></i>
+        </a>
+
+        <div id="PremiumList" class="w3-bar-block w3-hide w3-padding-large w3-medium">
+          <a href="PremiumCPU.html" class="w3-bar-item w3-button">CPU</a>
+          <a href="PremiumGPU.html" class="w3-bar-item w3-button">GPU</a>
+          <a href="PremiumRAM.html" class="w3-bar-item w3-button">RAM</a>
+          <a href="PremiumPSU.html" class="w3-bar-item w3-button">PSU</a>
+          <a href="PremiumCase.html" class="w3-bar-item w3-button">Case</a>
+          <a href="PremiumStorage.html" class="w3-bar-item w3-button">Storage</a>
+          <a href="PremiumMotherboard.html" class="w3-bar-item w3-button">Motherboard</a>
+        </div>
+
+        <a onclick="myAccFunc2()" href="javascript:void(0)" class="w3-button w3-block w3-left-align" id="myBtn2">
+          Budget <i class="fa fa-caret-down"></i>
+        </a>
+
+        <div id="BudgetList" class="w3-bar-block w3-hide w3-padding-large w3-medium">
+          <a href="BudgetCPU.html" class="w3-bar-item w3-button">CPU</a>
+          <a href="BudgetGPU.html" class="w3-bar-item w3-button">GPU</a>
+          <a href="BudgetRAM.html" class="w3-bar-item w3-button">RAM</a>
+          <a href="BudgetPSU.html" class="w3-bar-item w3-button">PSU</a>
+          <a href="BudgetCase.html" class="w3-bar-item w3-button">Case</a>
+          <a href="BudgetStorage.html" class="w3-bar-item w3-button">Storage</a>
+          <a href="BudgetMotherboard.html" class="w3-bar-item w3-button">Motherboard</a>
+        </div>  
+          
+        <a href="DIY.html" class="w3-bar-item w3-button">PC DIY</a>
+        
+      </div>
+
+      <a href="about.html" class="w3-bar-item w3-button w3-padding">About</a>
+      <a href="#footer" class="w3-bar-item w3-button w3-padding">Contact</a> 
+      
+    </nav>
+
+    <!-- Top menu on small screens -->
+    <header class="w3-bar w3-top w3-hide-large w3-black w3-xlarge">
+      <a class="w3-bar-item w3-padding-24 w3-wide static" href="javascript:void(0)" style="color: white;">𝕮𝖔𝖒𝖕𝖚𝖙𝖊𝖗 𝕴𝖓𝖘𝖎𝖉𝖊𝖗</a>
+      <a href="javascript:void(0)" class="w3-bar-item w3-button w3-padding-24 w3-right" onclick="w3_open()"><i class="fa fa-bars"></i></a>
+    </header>
+
+    <!-- Overlay effect when opening sidebar on small screens -->
+    <div class="w3-overlay w3-hide-large" onclick="w3_close()" style="cursor:pointer" title="close side menu" id="myOverlay"></div>
+
+    <!-- !PAGE CONTENT! -->
+    <div class="w3-main" style="margin-left:250px">
+
+      <!-- Push down content on small screens -->
+      <div class="w3-hide-large" style="margin-top:83px"></div>
+      
+
+      <!--Picture Slideshow-->
+
+      <div class="w3-display-container w3-container">
+        <h2>Daily News</h2>  
+        <div id="myCarousel" class="carousel slide" data-ride="carousel">
+          <!-- Indicators -->
+          <ol class="carousel-indicators">
+            <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+            <li data-target="#myCarousel" data-slide-to="1"></li>
+            <li data-target="#myCarousel" data-slide-to="2"></li>
+            <li data-target="#myCarousel" data-slide-to="3"></li>
+            <li data-target="#myCarousel" data-slide-to="4"></li>
+          </ol>
+      
+          <!-- Wrapper for slides -->
+          <div class="carousel-inner">
+            <div class="item active">
+              <a href="https://www.youtube.com/watch?v=UnA7tepsc7s">
+                <img src="img/Index_img/Cyberpunk2077.jpg" alt="Cyberpunk2077 launch">
+              </a>
+            </div>
+      
+            <div class="item">
+              <a href="https://www.youtube.com/watch?v=RkC0l4iekYo">
+                <img src="img/Index_img/ps5.jpeg" alt="Playstation 5">
+              </a>
+            </div>
+          
+            <div class="item">
+              <a href="https://www.youtube.com/watch?v=DIMAujZpry0">
+                <img src="img/Index_img/Xbox-Series-X-Xbox-Series-S.jpg" alt="Xbox Series">
+              </a>  
+            </div>
+
+            <div class="item">
+              <a href="https://www.youtube.com/watch?v=oAuszfdldEU">
+                <img src="img/Index_img/RtxShowcase.png" alt="Rtx 3080">
+              </a>
+            </div>
+
+            <div class="item">
+              <a href="https://www.youtube.com/watch?v=uQq0GApBQfA">
+                <img src="img/Index_img/Rx6800.png" alt="Rx6800">
+              </a>
+            </div>
+          </div>
+      
+          <!-- Left and right controls -->
+          <a class="left carousel-control" href="#myCarousel" data-slide="prev">
+            <span class="glyphicon glyphicon-chevron-left"></span>
+            <span class="sr-only">Previous</span>
+          </a>
+          <a class="right carousel-control" href="#myCarousel" data-slide="next">
+            <span class="glyphicon glyphicon-chevron-right"></span>
+            <span class="sr-only">Next</span>
+          </a>
+        </div>
+        <br>
+        <h2>Upcoming Dates</h2>
+        <br>
+        <h4>King Arthur: Knight's Tale [PC] – January 12, 2021</h4>
+        <br>
+        <h4>MXGP 2020 [PS5] – January 14, 2021</h4>
+        <br>
+        <h4>Scott Pilgrim vs. The World: The Game - Complete Edition [PC, PS4, XBO, Switch, Stadia] – January 14, 2021</h4>
+        <br>
+        <h4>Hitman 3 [PC, PS5, XSX, PS4, XBO, Stadia] – January 20, 2021</h4>
+        <br>
+        <h4>Ride 4 [PS5, XSX] – January 21, 2021</h4>
+        <br>
+        <h4>Encodya [PC] – January 26, 2021</h4>
+        <br>
+        <h4>Stronghold: Warlords [PC] – January 26, 2021</h4>
+        <br>
+        <h4>Ryte: The Eye of Atlantis [PC VR] – January 27, 2021</h4>
+        <br>
+        <h4>The Medium [PC, XSX] – January 28, 2021
+        </h4>
+        <br>
+        <h4>Everspace 2 [PC] – January TBC, 2021</h4>
+
+      </div>
+
+      <br><br>
+
+      <!-- Subscribe section -->
+      <div class="w3-container w3-black w3-padding-32">
+        <h1>Subscribe</h1>
+        <p>To get special offers and VIP treatment:</p>
+        <p><input class="w3-input w3-border" type="text" placeholder="Enter e-mail" style="width:100%"></p>
+        <button type="button" class="w3-button w3-red w3-margin-bottom">Subscribe</button>
+      </div>
+      
+      <!-- Footer -->
+      <footer class="w3-padding-64 w3-light-grey w3-small w3-center" id="footer">
+        <div class="w3-row-padding">
+          <div class="w3-col s4">
+            <h4>Contact</h4>
+            <p>Questions? Go ahead.</p>
+            <form action="/action_page.php" target="_blank">
+              <p><input class="w3-input w3-border" type="text" placeholder="Name" name="Name" required></p>
+              <p><input class="w3-input w3-border" type="text" placeholder="Email" name="Email" required></p>
+              <p><input class="w3-input w3-border" type="text" placeholder="Subject" name="Subject" required></p>
+              <p><input class="w3-input w3-border" type="text" placeholder="Message" name="Message" required></p>
+              <button type="submit" class="w3-button w3-block w3-black">Send</button>
+            </form>
+          </div>
+          
+          <div class="w3-col s4">
+            <h4>About</h4>
+            <p><a href="about.html">About Us</a></p>
+            <p><a href="#">Support</a></p>
+          </div>
+
+          <div class="w3-col s4 w3-justify">
+            <h4>Store</h4>
+            <p><i class="fa fa-fw fa-map-marker"></i>Computer Insider</p>
+            <p><i class="fa fa-fw fa-phone"></i>8479135169</p>
+            <p><i class="fa fa-fw fa-envelope"></i>aliq1565@gmail.com</p>
+            <br>
+            <i class="fa fa-facebook-official w3-hover-opacity w3-large"></i>
+            <i class="fa fa-instagram w3-hover-opacity w3-large"></i>
+            <i class="fa fa-snapchat w3-hover-opacity w3-large"></i>
+            <i class="fa fa-pinterest-p w3-hover-opacity w3-large"></i>
+            <i class="fa fa-twitter w3-hover-opacity w3-large"></i>
+            <i class="fa fa-linkedin w3-hover-opacity w3-large"></i>
+          </div>
+        </div>
+      </footer>
+
+      <!-- End page content -->
+    </div>
+
+    <script>
+      function myAccFunc() {
+        var x = document.getElementById("NewList");
+        if (x.className.indexOf("w3-show") == -1) {
+          x.className += " w3-show";
+        } else {
+          x.className = x.className.replace(" w3-show", "");
+        }
+      }
+
+      function myAccFunc1() {
+        var x = document.getElementById("PremiumList");
+        if (x.className.indexOf("w3-show") == -1) {
+          x.className += " w3-show";
+        } else {
+          x.className = x.className.replace(" w3-show", "");
+        }
+      }
+
+      function myAccFunc2() {
+        var x = document.getElementById("BudgetList");
+        if (x.className.indexOf("w3-show") == -1) {
+          x.className += " w3-show";
+        } else {
+          x.className = x.className.replace(" w3-show", "");
+        }
+      }
+
+      // Open and close sidebar
+      function w3_open() {
+        document.getElementById("mySidebar").style.display = "block";
+        document.getElementById("myOverlay").style.display = "block";
+      }
+      
+      function w3_close() {
+        document.getElementById("mySidebar").style.display = "none";
+        document.getElementById("myOverlay").style.display = "none";
+      }
+    </script>
+
+  </body>
+</html>
